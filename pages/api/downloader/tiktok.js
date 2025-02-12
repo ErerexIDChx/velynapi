@@ -10,11 +10,6 @@ export default async function handler(req, res) {
         });
     }
 
-const apiKey = req.headers['api_key'];
-    if (!apiKey || !API_KEY.includes(apiKey)) {
-      return res.status(401).json({ error: 'Unauthorized' });
-    }
-
     const { url } = req.query;
     
     try {
