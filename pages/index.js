@@ -85,7 +85,7 @@ useEffect(() => {
   return (
     <>
       <Head>
-        <title>kyuubeyours - API Documentation</title>
+        <title>VelynAPI</title>
         <meta name="title" content="VelynAPI - Documentation" />
         <meta name="description" content="VelynApi is a free, simple REST API created by ErerexIDChx for the common good. Feel free to use it, but please avoid DDoS attacks." />
         <meta name="keywords" content="REST API, KyuuRzy, Siputzx, Qanypaw, Nawdev, Itzpire API, free API, API documentation, bot wa, free REST API" />
