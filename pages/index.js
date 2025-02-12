@@ -20,60 +20,61 @@ export default function Home() {
     const style = document.createElement('style');
     style.innerHTML = `
       body,
-      .swagger-ui .info .title,
-      .swagger-ui .scheme-container,
-      .swagger-ui select,
-      .swagger-ui textarea,
-      .swagger-ui input[type="text"],
-      .swagger-ui input[type="email"],
-      .swagger-ui input[type="file"],
-      .swagger-ui input[type="password"],
-      .swagger-ui input[type="search"],
-      .swagger-ui textarea,
-      .swagger-ui .topbar,
-      .swagger-ui .dialog-ux .modal-ux {
-        background-color: #0d0d0d !important;
-      }
+    .swagger-ui .info .title,
+    .swagger-ui .scheme-container,
+    .swagger-ui select,
+    .swagger-ui textarea,
+    .swagger-ui input[type="text"],
+    .swagger-ui input[type="email"],
+    .swagger-ui input[type="file"],
+    .swagger-ui input[type="password"],
+    .swagger-ui input[type="search"],
+    .swagger-ui textarea,
+    .swagger-ui .topbar,
+    .swagger-ui .dialog-ux .modal-ux {
+      background-color: #0d0d0d !important;
+    }
 
-      .swagger-ui .opblock .opblock-section-header,
-      .swagger-ui input[type="email"].invalid,
-      .swagger-ui input[type="file"].invalid,
-      .swagger-ui input[type="password"].invalid,
-      .swagger-ui input[type="search"].invalid,
-      .swagger-ui input[type="text"].invalid,
-      .swagger-ui textarea.invalid {
-        background-color: transparent;
-      }
+    .swagger-ui .opblock .opblock-section-header,
+    .swagger-ui input[type="email"].invalid,
+    .swagger-ui input[type="file"].invalid,
+    .swagger-ui input[type="password"].invalid,
+    .swagger-ui input[type="search"].invalid,
+    .swagger-ui input[type="text"].invalid,
+    .swagger-ui textarea.invalid {
+      background-color: transparent;
+    }
 
-      .swagger-ui .topbar,
-      .swagger-ui .opblock .opblock-section-header,
-      .swagger-ui table thead tr td,
-      .swagger-ui table thead tr th,
-      .swagger-ui .opblock-tag,
-      .swagger-ui .dialog-ux .modal-ux,
-      .swagger-ui section.models .model-container,
-      .swagger-ui section.models.is-open h4,
-      .swagger-ui section.models,
-      .swagger-ui .dialog-ux .modal-ux-header,
-      .swagger-ui .auth-container {
-        border-color: #262626;
-      }
+    .swagger-ui .topbar,
+    .swagger-ui .opblock .opblock-section-header,
+    .swagger-ui table thead tr td,
+    .swagger-ui table thead tr th,
+    .swagger-ui .opblock-tag,
+    .swagger-ui .dialog-ux .modal-ux,
+    .swagger-ui section.models .model-container,
+    .swagger-ui section.models.is-open h4,
+    .swagger-ui section.models,
+    .swagger-ui .dialog-ux .modal-ux-header,
+    .swagger-ui .auth-container {
+      border-color: #262626;
+    }
 
-      .swagger-ui .opblock:hover {
-        border-color: #1a1a1a;
-      }
+    .swagger-ui .opblock:hover {
+      border-color: #1a1a1a;
+    }
 
-      .swagger-ui,
-      .swagger-ui .info .title,
-      .swagger-ui .scheme-container,
-      .swagger-ui .model-title,
-      .swagger-ui .opblock-summary-method,
-      .swagger-ui .opblock-summary-path,
-      .swagger-ui .response-col_status,
-      .swagger-ui label,
-      .swagger-ui .opblock-tag {
-        color: #ffffff !important;
-      }
+    /* Mengubah warna teks agar lebih kontras */
+    .swagger-ui,
+    .swagger-ui .info .title,
+    .swagger-ui .scheme-container,
+    .swagger-ui .model-title,
+    .swagger-ui .opblock-summary-method,
+    .swagger-ui .opblock-summary-path,
+    .swagger-ui .response-col_status,
+    .swagger-ui label,
+    .swagger-ui .opblock-tag {
+      color: #ffffff !important;
+    }  
     `;
     document.head.appendChild(style);
     return () => {
