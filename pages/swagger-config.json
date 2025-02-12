@@ -12,20 +12,6 @@
     },
     "version": "1.0"
   },
-  "components": {
-    "securitySchemes": {
-      "ApiKeyAuth": {
-        "type": "apiKey",
-        "name": "api_key",
-        "in": "header"
-      }
-    }
-  },
-  "security": [
-    {
-      "ApiKeyAuth": []
-    }
-  ],
   "paths": {
     "/api/tools/Carbonfyv1": {
       "post": {
@@ -47,11 +33,6 @@
             }
           }
         },
-        "security": [
-          {
-            "ApiKeyAuth": []
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -73,11 +54,6 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "security": [
-          {
-            "ApiKeyAuth": []
           }
         ],
         "responses": {
@@ -103,11 +79,6 @@
             }
           }
         ],
-        "security": [
-          {
-            "ApiKeyAuth": []
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -129,11 +100,6 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "security": [
-          {
-            "ApiKeyAuth": []
           }
         ],
         "responses": {
@@ -159,11 +125,6 @@
             }
           }
         ],
-        "security": [
-          {
-            "ApiKeyAuth": []
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -185,11 +146,6 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "security": [
-          {
-            "ApiKeyAuth": []
           }
         ],
         "responses": {
