@@ -7,11 +7,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { text } = req.body;
 
-    const apiKey = req.headers['api_key'];
-    if (!apiKey || !API_KEY.includes(apiKey)) {
-      return res.status(401).json({ error: 'Unauthorized' });
-    }
-
     try {
       const result = await CarbonifyV1(text);
       res.status(200).json({ status: true, creator: CREATOR, data: result });
