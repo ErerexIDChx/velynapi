@@ -62,55 +62,30 @@
         }
       }
     },
-     "/api/downloader/instagram": {
-    "get": {
-      "tags": ["Downloader"],
-      "summary": "Instagram media data",
-      "parameters": [
-        {
-          "name": "url",
-          "in": "query",
-          "required": true,
-          "schema": {
-            "type": "string",
-            "format": "uri",
-            "example": "https://www.instagram.c///"
-          },
-          "description": "Valid Instagram URL (post, reel, tv, story)"
-        }
-      ],
-      "security": [
-        {
-          "ApiKeyAuth": []
-        }
-      ],
-      "responses": {
-        "200": {
-          "description": "Success",
-          "content": {
-            "application/json": {
-              "example": {
-                "status": true,
-                "creator": "VelynAPI",
-                "data": {
-                  "url": "result_url", 
-                  "metadata": {
-                    "source": "instagram",
-                    "original_url": "url"
-                  }
-                }
-              }
+    "/api/downloader/instagram": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu Instagram downloader",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
-        },
-        "400": {
-          "description": "Invalid URL"
-        },
-        "401": {
-          "description": "Unauthorized"
-        },
-        "500": {
-          "description": "Internal Server Error"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
