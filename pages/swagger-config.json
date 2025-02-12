@@ -86,18 +86,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "example": {
-                  "status": true,
-                  "creator": "VelynAPI",
-                  "data": {
-                    "url": ["https://download-link.mp4"],
-                    "metadata": { "source": "instagram", "original_url": "https://www.instagram.com/reel/abc123/" }
-                  }
-                }
-              }
+            "description": "Success"         
             }
           },
           "400": {
