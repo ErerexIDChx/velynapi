@@ -117,6 +117,34 @@
           }
         }
       }
+    },
+    "/api/downloader/tiktoksearch": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu tiktok searchdownloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
     }
   }
 }
