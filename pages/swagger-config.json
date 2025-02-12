@@ -7,7 +7,7 @@
       "email": "https://wa.me/+62895342022385"
     },
     "license": {
-      "name": "API Development Information",
+      "name": "NextTime Information",
       "url": "https://whatsapp.com/channel/0029VaKoIaj9cDDgB6N9u232"
     },
     "version": "1.0"
@@ -74,7 +74,7 @@
           "schema": {
             "type": "string",
             "format": "uri",
-            "example": "https://www.instagram.com/p/abc123/"
+            "example": "https://www.instagram.c///"
           },
           "description": "Valid Instagram URL (post, reel, tv, story)"
         }
@@ -93,10 +93,10 @@
                 "status": true,
                 "creator": "VelynAPI",
                 "data": {
-                  "url": result.url,
+                  "url": "result_url", 
                   "metadata": {
                     "source": "instagram",
-                    "original_url": url
+                    "original_url": "url"
                   }
                 }
               }
