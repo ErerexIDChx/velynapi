@@ -89,6 +89,34 @@
           }
         }
       }
+    },
+    "/api/downloader/facebook": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu Facebook downloader",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
     }
   }
 }
