@@ -121,7 +121,35 @@
     "/api/downloader/tiktoksearch": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu tiktok searchdownloader",
+        "description": "deskripsi tentang apa itu tiktok search downloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/spotifydl": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu Spotify downloader",
         "parameters": [
           {
             "name": "query",
