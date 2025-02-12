@@ -152,7 +152,35 @@
         "description": "deskripsi tentang apa itu Spotify downloader",
         "parameters": [
           {
-            "name": "query",
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/tiktok": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu tiktok downloader",
+        "parameters": [
+          {
+            "name": "url",
             "in": "query",
             "schema": {
               "type": "string"
