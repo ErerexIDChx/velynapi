@@ -1,0 +1,41 @@
+{
+  "name": "swagger-ui-nextjss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vercel/analytics": "*",
+    "@vercel/speed-insights": "*",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "crypto": "^1.0.1",
+    "crypto-js": "latest",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "13.5.6",
+    "file-type": "^19.5.0",
+    "fs": "^0.0.1-security",
+    "form-data": "^4.0.1",
+    "g-i-s": "*",
+    "g4f": "^1.4.3",
+    "google-it": "*",
+    "got": "*",
+    "groq-sdk": "^0.7.0",
+    "html-entities": "*",
+    "needle": "^3.2.0",
+    "next": "13.5.5",
+    "node-fetch": "^2.7.0",
+    "node-upload-images": "^1.0.1",
+    "qrcode": "^1.5.4",
+    "qs": "^6.10.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swagger-ui-react": "*",
+    "yargs": "^17.2.1",
+    "yt-search": "*"
+  }
+}
