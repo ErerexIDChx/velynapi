@@ -2,18 +2,39 @@ import axios from "axios";
 import cheerio from "cheerio";
 import qs from 'qs';
 
+import { API_KEY, CREATOR } from "../../../settings";
+
 export default async function handler(req, res) {
-  try {
-    const url = req.query.url;
-    if (!url) {
-      return res.status(400).json({ msg: "URL is required" });
+    if (req.method !== "GET") {
+        return res.status(405).json({
+            status: false,
+            creator: CREATOR,
+            error: "Method Not Allowed",
+        });
     }
 
-    const result = await Instagram(url);
-    return res.status(200).json(result);
-  } catch (error) {
-    return res.status(500).json({ msg: error.message });
-  }
+const apiKey = req.headers['api_key'];
+    if (!apiKey || !API_KEY.includes(apiKey)) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    const { url } = req.query;
+    
+    try {
+        const data = await Instagram(url);
+        res.status(200).json({
+            status: true,
+            creator: CREATOR,
+            data: data,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            status: false,
+            creator: CREATOR,
+            error: "Internal Server Error",
+        });
+    }
 }
 
 const getDownloadLinks = url => {
