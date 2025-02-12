@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "VelynApi",
-    "description": "Welcome to the VelynApi, your gateway to streamlined and efficient application integration. Designed with simplicity and versatility in mind, Shinoa empowers developers to effortlessly manage and interact with essential data and functionalities. Whether you're building a web application, mobile app, or integrating with other services, ErerexID Chx provides a robust foundation for seamless operations.",
+    "description": "Welcome everyone, welcome to VelynAPI document home page. You can retrieve api data only in VelynAPI and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand",
     "contact": {
       "email": "https://wa.me/+62895342022385"
     },
@@ -142,6 +142,98 @@
         "parameters": [
           {
             "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }, 
+    "/api/information/jktnews": {
+      "get": {
+        "tags": ["Information"],
+        "description": "deskripsi tentang JKTNEWS",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }, 
+    "/api/information/roblox": {
+      "get": {
+        "tags": ["Information"],
+        "description": "deskripsi tentang apa itu Roblox Stalker",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }, 
+    "/api/information/igstalk": {
+      "get": {
+        "tags": ["Information"],
+        "description": "deskripsi tentang apa itu instagram stalker",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }, 
+    "/api/information/ytstalk": {
+      "get": {
+        "tags": ["Information"],
+        "description": "deskripsi tentang apa itu youtube stalker",
+        "parameters": [
+          {
+            "name": "query",
             "in": "query",
             "schema": {
               "type": "string"
