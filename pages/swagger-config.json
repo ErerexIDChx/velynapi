@@ -62,41 +62,55 @@
         }
       }
     },
-    "/api/downloader/instagram": {
-      "get": {
-        "tags": ["Downloader"],
-        "summary": "Instagram media data",
-        "parameters": [
-          {
-            "name": "url",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uri",
-              "example": "input your url"
-            },
-            "description": "Valid Instagram URL (post, reel, tv, story)"
-          }
-        ],
-        "security": [
-          {
-            "ApiKeyAuth": []
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"         
+     "/api/downloader/instagram": {
+    "get": {
+      "tags": ["Downloader"],
+      "summary": "Instagram media data",
+      "parameters": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://www.instagram.com/p/abc123/"
+          },
+          "description": "Valid Instagram URL (post, reel, tv, story)"
+        }
+      ],
+      "security": [
+        {
+          "ApiKeyAuth": []
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "example": {
+                "status": true,
+                "creator": "VelynAPI",
+                "data": {
+                  "url": result.url,
+                  "metadata": {
+                    "source": "instagram",
+                    "original_url": url
+                  }
+                }
+              }
             }
-          },
-          "400": {
-            "description": "Invalid URL"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          }
+        },
+        "400": {
+          "description": "Invalid URL"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
           }
         }
       }
