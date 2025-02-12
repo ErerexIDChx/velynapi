@@ -32,7 +32,7 @@ export default function Home() {
     .swagger-ui textarea,
     .swagger-ui .topbar,
     .swagger-ui .dialog-ux .modal-ux {
-      background-color: #0d0d0d !important;
+      background-color: #ffffff !important;
     }
 
     .swagger-ui .opblock .opblock-section-header,
@@ -56,14 +56,14 @@ export default function Home() {
     .swagger-ui section.models,
     .swagger-ui .dialog-ux .modal-ux-header,
     .swagger-ui .auth-container {
-      border-color: #262626;
+      border-color: #d1d1d1;
     }
 
     .swagger-ui .opblock:hover {
-      border-color: #1a1a1a;
+      border-color: #e0e0e0;
     }
 
-    /* Mengubah warna teks agar lebih kontras */
+    /* Mengubah warna teks agar tetap kontras */
     .swagger-ui,
     .swagger-ui .info .title,
     .swagger-ui .scheme-container,
@@ -73,7 +73,7 @@ export default function Home() {
     .swagger-ui .response-col_status,
     .swagger-ui label,
     .swagger-ui .opblock-tag {
-      color: #ffffff !important;
+      color: #000000 !important;
     }  
     `;
     document.head.appendChild(style);
