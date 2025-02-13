@@ -45,7 +45,7 @@
     },
     "/api/ai/openai": {
       "get": {
-        "tags": ["Article Intelligence"],
+        "tags": ["ArticleIntelligence"],
         "description": "ChatAI",
         "parameters": [
           {
@@ -68,7 +68,7 @@
     },
      "/api/ai/simi": {
       "get": {
-        "tags": ["Article Intelligence"],
+        "tags": ["ArticleIntelligence"],
         "description": "ChatAI",
         "parameters": [
           {
@@ -91,7 +91,7 @@
     },  
      "/api/ai/gemini": {
       "get": {
-        "tags": ["Article Intelligence"],
+        "tags": ["ArticleIntelligence"],
         "description": "ChatAI",
         "parameters": [
           {
@@ -114,7 +114,7 @@
     },
      "/api/ai/deepseek": {
       "get": {
-        "tags": ["Article Intelligence"],
+        "tags": ["ArticleIntelligence"],
         "description": "ChatAI",
         "parameters": [
           {
