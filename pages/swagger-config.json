@@ -43,6 +43,98 @@
         }
       }
     },
+    "/api/ai/openai": {
+      "get": {
+        "tags": ["Article Intelligence"],
+        "description": "ChatAI",
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+     "/api/ai/simi": {
+      "get": {
+        "tags": ["Article Intelligence"],
+        "description": "ChatAI",
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },  
+     "/api/ai/gemini": {
+      "get": {
+        "tags": ["Article Intelligence"],
+        "description": "ChatAI",
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+     "/api/ai/deepseek": {
+      "get": {
+        "tags": ["Article Intelligence"],
+        "description": "ChatAI",
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/api/downloader/instagram": {
       "get": {
         "tags": ["Downloader"],
@@ -93,6 +185,52 @@
       "get": {
         "tags": ["Search"],
         "description": "deskripsi tentang apa itu tiktok search downloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/anichin": {
+      "get": {
+        "tags": ["Search"],
+        "description": "deskripsi tentang apa itu tiktok search downloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/bstationSearch": {
+      "get": {
+        "tags": ["Search"],
+        "description": "deskripsi tentang apa itu bstation search downloader",
         "parameters": [
           {
             "name": "query",
