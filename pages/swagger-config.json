@@ -275,7 +275,7 @@
     },
     "/api/downloader/buddy": {
       "get": {
-        "tags": ["Search"],
+        "tags": ["Downloader"],
         "description": "deskripsi tentang apa itu buddy search downloader",
         "parameters": [
           {
