@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import swaggerConfig from "./swagger-config.json";
 import { Inter } from "next/font/google";
 import { useEffect } from "react";
-import { tailwindCSS }from "tailwindcss";
+import { tailwindCSS } from "tailwindcss";
 
 const inter = Inter({ subsets: ["latin"] });
 
