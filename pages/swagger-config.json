@@ -273,6 +273,29 @@
         }
       }
     },
+    "/api/downloader/buddy": {
+      "get": {
+        "tags": ["Search"],
+        "description": "deskripsi tentang apa itu buddy search downloader",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/api/downloader/tiktok": {
       "get": {
         "tags": ["Downloader"],
