@@ -227,6 +227,52 @@
         }
       }
     },
+    "/api/search/wikped": {
+      "get": {
+        "tags": ["Search"],
+        "description": "deskripsi tentang apa itu Wikipedia search downloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/spotifySearch": {
+      "get": {
+        "tags": ["Downloader"],
+        "description": "deskripsi tentang apa itu tiktok search downloader",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/api/search/bstationSearch": {
       "get": {
         "tags": ["Search"],
