@@ -24,8 +24,8 @@ Velyn API hadir dengan dokumentasi interaktif yang memudahkan pengguna untuk mem
 
 📌 **Akses Dokumentasi:**  
 🔗 [https://velynapi.vercel.app](https://velynapi.vercel.app)  
-📸 **Tampilan Swagger UI:**  
-![Swagger UI](https://cdn.obscura.web.id/Cat.jpg)
+📸 **Tampilan UI:**  
+![UI](https://img5.pixhost.to/images/2882/567018119_test.jpg)
 
 ---
 
