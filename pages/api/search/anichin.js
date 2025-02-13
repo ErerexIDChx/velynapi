@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as cheerio from "cheerio";
+import cheerio from "cheerio";
 import { API_KEY, CREATOR } from "../../../settings";
 
 export default async function handler(req, res) {
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     }
 }
 
-async function anichinSearch(query) => {
+async function anichinSearch(query) {
       try {
          let { data } = await axios.get(`https://anichin.xyz/?s=${encodeURIComponent(query)}`);
          let $ = cheerio.load(data);
