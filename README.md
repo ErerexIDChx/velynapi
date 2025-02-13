@@ -41,10 +41,8 @@ Untuk mulai menggunakan Velyn API, pastikan Anda memiliki API Key (jika diperluk
 ### Contoh Permintaan
 
 ```bash
-curl -X GET "https://velynapi.vercel.app/v1/example-endpoint" -H "Authorization: Bearer YOUR_API_KEY"
+curl -X GET "https://velyn.vercel.app/api/ai/deepseek?prompt=hallo" -H "Authorization: Bearer YOUR_API_KEY"
 ```
-
-<button onclick="navigator.clipboard.writeText('curl -X GET "https://velynapi.vercel.app/v1/example-endpoint" -H "Authorization: Bearer YOUR_API_KEY"')">Salin Kode</button>
 
 ---
 
