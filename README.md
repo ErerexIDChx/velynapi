@@ -25,7 +25,7 @@ Velyn API hadir dengan dokumentasi interaktif yang memudahkan pengguna untuk mem
 📌 **Akses Dokumentasi:**  
 🔗 [https://velynapi.vercel.app](https://velynapi.vercel.app)  
 📸 **Tampilan Swagger UI:**  
-![Swagger UI](https://velynapi.vercel.app/swagger-ui.png) *(Gambar ilustrasi Swagger UI Next.js)*
+![Swagger UI](https://cdn.obscura.web.id/Cat.jpg)
 
 ---
 
