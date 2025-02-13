@@ -1,6 +1,6 @@
 {
-  "name": "swagger-ui-nextjss",
-  "version": "0.1.0",
+  "name": "VelynApi-Swagger-ui-nextjs",
+  "version": "0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
