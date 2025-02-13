@@ -63,7 +63,7 @@ Proyek ini dilisensikan di bawah **[Nama Lisensi]**. Untuk detail lebih lanjut, 
 Proyek ini dikembangkan oleh:
 
 - **ErerexIdChx** – Pengembang utama & pemilik proyek.  
-- **[Nama Kontributor 1]** – [Peran & kontribusi].  
+- **NyxObscura** – [Peran & kontribusi].  
 - **[Nama Kontributor 2]** – [Peran & kontribusi].  
 - **[Nama Kontributor 3]** – [Peran & kontribusi].  
 - **[Nama Kontributor 4]** – [Peran & kontribusi].  
