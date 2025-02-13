@@ -2,8 +2,6 @@
 
 🚀 Velyn API
 
-
-
 Velyn API adalah REST API berkinerja tinggi yang dikembangkan oleh ErerexIdChx dengan dukungan dari lima kontributor berbakat. API ini dirancang untuk menyediakan layanan [deskripsi singkat tentang fungsi utama API] yang dapat diakses dengan mudah dan efisien.
 
 🌟 Fitur Unggulan
@@ -27,7 +25,7 @@ Velyn API adalah REST API berkinerja tinggi yang dikembangkan oleh ErerexIdChx d
 Velyn API hadir dengan dokumentasi interaktif yang memudahkan pengguna untuk memahami cara kerja API, termasuk detail parameter dan contoh respons.
 
 📌 Akses Dokumentasi:
-🔗 https://velynapi.com
+🔗 https://velynapi.vercel.app
 
 
 ---
@@ -51,7 +49,7 @@ Untuk mulai menggunakan Velyn API, pastikan Anda memiliki API Key (jika diperluk
 
 Contoh permintaan menggunakan cURL:
 
-curl -X GET "https://velynapi.com/v1/example-endpoint" -H "Authorization: Bearer YOUR_API_KEY"
+curl -X GET "https://velynapi.vercel.app/v1/example-endpoint" -H "Authorization: Bearer YOUR_API_KEY"
 
 
 ---
@@ -96,8 +94,8 @@ Terima kasih kepada semua kontributor yang telah membantu dalam pengembangan Vel
 
 Untuk pertanyaan atau dukungan, silakan hubungi:
 
-📧 Email: [email@example.com]
-🌍 Website: https://velynapi.com
+📧 Email: [service@obscura.icu]
+🌍 Website: https://velynapi.vercel.app
 
 
 ---
