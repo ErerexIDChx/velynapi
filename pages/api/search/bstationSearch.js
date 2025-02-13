@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as cheerio from "cheerio";
+import cheerio from "cheerio";
 import { API_KEY, CREATOR } from "../../../settings";
 
 export default async function handler(req, res) {
