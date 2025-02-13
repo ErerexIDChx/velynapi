@@ -1,5 +1,5 @@
 {
-  "openapi": "1.0.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "VelynApi",
     "description": "Welcome everyone, welcome to VelynAPI document home page. You can retrieve api data only in VelynAPI and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand",
