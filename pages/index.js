@@ -1,80 +1,80 @@
 "use client";
-import Head from 'next/head';
-import Script from 'next/script';
-import SwaggerUI from 'swagger-ui-react';
-import 'swagger-ui-react/swagger-ui.css';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
-import swaggerConfig from './swagger-config.json';
-import { Inter } from 'next/font/google';
-import { useEffect } from 'react';
+import Head from "next/head";
+import Script from "next/script";
+import SwaggerUI from "swagger-ui-react";
+import "swagger-ui-react/swagger-ui.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import swaggerConfig from "./swagger-config.json";
+import { Inter } from "next/font/google";
+import { useEffect } from "react";
+import "tailwindcss/tailwind.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const swaggerUIConfig = {
-    defaultModelRendering: 'model',
+    defaultModelRendering: "model",
   };
 
   useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.innerHTML = `
       body,
-    .swagger-ui .info .title,
-    .swagger-ui .scheme-container,
-    .swagger-ui select,
-    .swagger-ui textarea,
-    .swagger-ui input[type="text"],
-    .swagger-ui input[type="email"],
-    .swagger-ui input[type="file"],
-    .swagger-ui input[type="password"],
-    .swagger-ui input[type="search"],
-    .swagger-ui textarea,
-    .swagger-ui .topbar,
-    .swagger-ui .dialog-ux .modal-ux {
-      background-color: #ffffff !important;
-    }
+      .swagger-ui .info .title,
+      .swagger-ui .scheme-container,
+      .swagger-ui select,
+      .swagger-ui textarea,
+      .swagger-ui input[type="text"],
+      .swagger-ui input[type="email"],
+      .swagger-ui input[type="file"],
+      .swagger-ui input[type="password"],
+      .swagger-ui input[type="search"],
+      .swagger-ui textarea,
+      .swagger-ui .topbar,
+      .swagger-ui .dialog-ux .modal-ux {
+        background-color: #ffffff !important;
+      }
 
-    .swagger-ui .opblock .opblock-section-header,
-    .swagger-ui input[type="email"].invalid,
-    .swagger-ui input[type="file"].invalid,
-    .swagger-ui input[type="password"].invalid,
-    .swagger-ui input[type="search"].invalid,
-    .swagger-ui input[type="text"].invalid,
-    .swagger-ui textarea.invalid {
-      background-color: transparent;
-    }
+      .swagger-ui .opblock .opblock-section-header,
+      .swagger-ui input[type="email"].invalid,
+      .swagger-ui input[type="file"].invalid,
+      .swagger-ui input[type="password"].invalid,
+      .swagger-ui input[type="search"].invalid,
+      .swagger-ui input[type="text"].invalid,
+      .swagger-ui textarea.invalid {
+        background-color: transparent;
+      }
 
-    .swagger-ui .topbar,
-    .swagger-ui .opblock .opblock-section-header,
-    .swagger-ui table thead tr td,
-    .swagger-ui table thead tr th,
-    .swagger-ui .opblock-tag,
-    .swagger-ui .dialog-ux .modal-ux,
-    .swagger-ui section.models .model-container,
-    .swagger-ui section.models.is-open h4,
-    .swagger-ui section.models,
-    .swagger-ui .dialog-ux .modal-ux-header,
-    .swagger-ui .auth-container {
-      border-color: #d1d1d1;
-    }
+      .swagger-ui .topbar,
+      .swagger-ui .opblock .opblock-section-header,
+      .swagger-ui table thead tr td,
+      .swagger-ui table thead tr th,
+      .swagger-ui .opblock-tag,
+      .swagger-ui .dialog-ux .modal-ux,
+      .swagger-ui section.models .model-container,
+      .swagger-ui section.models.is-open h4,
+      .swagger-ui section.models,
+      .swagger-ui .dialog-ux .modal-ux-header,
+      .swagger-ui .auth-container {
+        border-color: #d1d1d1;
+      }
 
-    .swagger-ui .opblock:hover {
-      border-color: #e0e0e0;
-    }
+      .swagger-ui .opblock:hover {
+        border-color: #e0e0e0;
+      }
 
-    /* Mengubah warna teks agar tetap kontras */
-    .swagger-ui,
-    .swagger-ui .info .title,
-    .swagger-ui .scheme-container,
-    .swagger-ui .model-title,
-    .swagger-ui .opblock-summary-method,
-    .swagger-ui .opblock-summary-path,
-    .swagger-ui .response-col_status,
-    .swagger-ui label,
-    .swagger-ui .opblock-tag {
-      color: #000000 !important;
-    }  
+      .swagger-ui,
+      .swagger-ui .info .title,
+      .swagger-ui .scheme-container,
+      .swagger-ui .model-title,
+      .swagger-ui .opblock-summary-method,
+      .swagger-ui .opblock-summary-path,
+      .swagger-ui .response-col_status,
+      .swagger-ui label,
+      .swagger-ui .opblock-tag {
+        color: #000000 !important;
+      }
     `;
     document.head.appendChild(style);
     return () => {
@@ -121,13 +121,15 @@ export default function Home() {
           })
         }}
       />
-      <main className={inter.className}>
+      <main className={`p-6 ${inter.className}`}>
         <Analytics />
         <SpeedInsights />
-        <SwaggerUI
-          spec={swaggerConfig}
-          {...swaggerUIConfig}
-        />
+        <div className="bg-white shadow-md rounded-lg p-4">
+          <SwaggerUI
+            spec={swaggerConfig}
+            {...swaggerUIConfig}
+          />
+        </div>
       </main>
     </>
   );
