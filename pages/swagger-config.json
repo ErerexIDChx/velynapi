@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "info": {
     "title": "VelynApi",
     "description": "Welcome everyone, welcome to VelynAPI document home page. You can retrieve api data only in VelynAPI and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand",
@@ -10,7 +10,7 @@
       "name": "NextTime Information",
       "url": "https://whatsapp.com/channel/0029VaKoIaj9cDDgB6N9u232"
     },
-    "version": "1.0"
+    "version": "2.0"
   },
   "paths": {
     "/api/tools/Carbonfyv1": {
