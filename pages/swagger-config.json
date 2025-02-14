@@ -250,13 +250,13 @@
         }
       }
     },
-    "/api/downloader/spotifySearch": {
+    "/api/downloader/snack": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu tiktok search downloader",
+        "description": "deskripsi tentang apa itu snackvideo downloader",
         "parameters": [
           {
-            "name": "query",
+            "name": "url",
             "in": "query",
             "schema": {
               "type": "string"
