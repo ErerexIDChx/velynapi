@@ -2,18 +2,31 @@ import fetch from "node-fetch";
 import { API_KEY, CREATOR } from '../../../settings';
 
 export default async function handler(req, res) {
-  if (req.method === 'GET') {
-    const { text } = req.body;
-
-    try {
-      const result = await searchSubdomains(text);
-      res.status(200).json({ status: true, creator: CREATOR, data: result });
-    } catch (error) {
-      res.status(500).json({ status: false, creator: CREATOR, error: error.message || 'Internal Server Error' });
+    if (req.method !== "GET") {
+        return res.status(405).json({
+            status: false,
+            creator: CREATOR,
+            error: "Method tidak dapat berfungsi",
+        });
     }
-  } else {
-    res.status(405).json({ status: false, creator: CREATOR, error: 'Method Not Allowed' });
-  }
+
+    const { query } = req.query;
+    
+    try {
+        const data = await searchSubdomains(query);
+        res.status(200).json({
+            status: true,
+            creator: CREATOR,
+            data: data,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            status: false,
+            creator: CREATOR,
+            error: "Internal Server Error",
+        });
+    }
 }
 
 async function searchSubdomains(domain) {
