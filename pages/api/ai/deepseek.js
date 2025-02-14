@@ -44,6 +44,8 @@ const deepSeekThink = {
         
         let { data: ak } = await axios.post("https://mind.hydrooo.web.id/v1/chat", d, head);
         
-        return ak.result;
+        let rep = ak.result.replace(/<think>\n\n<\/think>\n\n/g, "");
+
+        return rep;
     }
 };

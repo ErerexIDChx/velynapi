@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import { API_KEY, CREATOR } from '../../../settings';
 
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
+  if (req.method === 'GET') {
     const { text } = req.body;
 
     try {

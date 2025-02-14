@@ -43,10 +43,31 @@
         }
       }
     },
+    "/api/tools/subfinder": {
+      "get": {
+        "tags": ["Tools"],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/api/ai/openai": {
       "get": {
         "tags": ["ArticleIntelligence"],
-        "description": "ChatAI",
         "parameters": [
           {
             "name": "prompt",
@@ -69,7 +90,6 @@
      "/api/ai/simi": {
       "get": {
         "tags": ["ArticleIntelligence"],
-        "description": "ChatAI",
         "parameters": [
           {
             "name": "prompt",
@@ -92,7 +112,6 @@
      "/api/ai/gemini": {
       "get": {
         "tags": ["ArticleIntelligence"],
-        "description": "ChatAI",
         "parameters": [
           {
             "name": "prompt",
@@ -115,7 +134,6 @@
      "/api/ai/deepseek": {
       "get": {
         "tags": ["ArticleIntelligence"],
-        "description": "ChatAI",
         "parameters": [
           {
             "name": "prompt",
@@ -138,7 +156,6 @@
     "/api/downloader/instagram": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu Instagram downloader",
         "parameters": [
           {
             "name": "url",
@@ -161,8 +178,7 @@
     "/api/downloader/facebook": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu Facebook downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "url",
             "in": "query",
@@ -184,8 +200,7 @@
     "/api/search/tiktoksearch": {
       "get": {
         "tags": ["Search"],
-        "description": "deskripsi tentang apa itu tiktok search downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "query",
             "in": "query",
@@ -207,8 +222,7 @@
     "/api/search/anichin": {
       "get": {
         "tags": ["Search"],
-        "description": "deskripsi tentang apa itu tiktok search downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "query",
             "in": "query",
@@ -230,8 +244,7 @@
     "/api/search/wikped": {
       "get": {
         "tags": ["Search"],
-        "description": "deskripsi tentang apa itu Wikipedia search downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "query",
             "in": "query",
@@ -253,8 +266,7 @@
     "/api/downloader/snack": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu snackvideo downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "url",
             "in": "query",
@@ -276,8 +288,7 @@
     "/api/search/bstationSearch": {
       "get": {
         "tags": ["Search"],
-        "description": "deskripsi tentang apa itu bstation search downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "query",
             "in": "query",
@@ -299,8 +310,7 @@
     "/api/downloader/spotifydl": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu Spotify downloader",
-        "parameters": [
+         "parameters": [
           {
             "name": "url",
             "in": "query",
@@ -322,8 +332,7 @@
     "/api/downloader/buddy": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu buddy search downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "url",
             "in": "query",
@@ -345,8 +354,7 @@
     "/api/downloader/tiktok": {
       "get": {
         "tags": ["Downloader"],
-        "description": "deskripsi tentang apa itu tiktok downloader",
-        "parameters": [
+          "parameters": [
           {
             "name": "url",
             "in": "query",
