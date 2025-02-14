@@ -1,4 +1,4 @@
-import { anichinSearch } from "../../utils/anichinSearch";
+import { anichinSearch } from "../../../utils/function";
 import { API_KEY, CREATOR } from "../../settings";
 
 export default async function handler(req, res) {
