@@ -351,6 +351,28 @@
         }
       }
     },
+    "/api/downloader/krakenfiles": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
     "/api/downloader/tiktok": {
       "get": {
         "tags": ["Downloader"],
