@@ -181,7 +181,7 @@
         }
       }
     },
-    "/api/downloader/tiktoksearch": {
+    "/api/search/tiktoksearch": {
       "get": {
         "tags": ["Search"],
         "description": "deskripsi tentang apa itu tiktok search downloader",
