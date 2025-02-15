@@ -590,7 +590,7 @@
         }
       }
     },
-    "/api/ai/magicAI": {
+    "/api/ai/magicStudio": {
         "get": {
         "tags": ["Artificial Intelligence"],
         "parameters": [
