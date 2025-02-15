@@ -176,6 +176,60 @@
     }
   }
 },
+    "/api/search/an1": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Kata kunci untuk mencari aplikasi atau game di AN1"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "dev": { "type": "string" },
+                      "rating": { "type": "string" },
+                      "thumb": { "type": "string", "format": "uri" },
+                      "link": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
     "/api/ai/openai": {
       "get": {
         "tags": ["ArticleIntelligence"],
