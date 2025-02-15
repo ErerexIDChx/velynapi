@@ -331,7 +331,7 @@
         }
       }
     },
-    "/api/downloader/snack": {
+    "/api/downloader/snackVideo": {
       "get": {
         "tags": ["Downloader"],
           "parameters": [
