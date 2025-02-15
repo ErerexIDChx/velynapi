@@ -1,4 +1,4 @@
- import { ephoto } from "../../../utils/ephoto";
+import { ephoto } from "../../../utils/ephoto";
 import { API_KEY, CREATOR } from "../../../settings";
 
 const effectLinks = {
@@ -62,27 +62,38 @@ export default async function handler(req, res) {
     }
 
     try {
+        
         const result = await ephoto(link, text);
+
         
         if (result.error) {
             return res.status(500).json({
                 status: false,
                 creator: CREATOR,
-                error: "Gagal membuat efek!",
+                error: result.error,
             });
         }
 
-        res.status(200).json({
-            status: true,
-            creator: CREATOR,
-            data: result,
-        });
+        
+        if (result.imageUrl) {
+            
+            const imageResponse = await axios.get(result.imageUrl, { responseType: "arraybuffer" });
+            res.setHeader("Content-Type", "image/png");
+            return res.send(imageResponse.data);
+        } else {
+            
+            return res.status(200).json({
+                status: true,
+                creator: CREATOR,
+                data: result,
+            });
+        }
     } catch (error) {
         console.error("Ephoto Error:", error);
-        res.status(500).json({
+        return res.status(500).json({
             status: false,
             creator: CREATOR,
             error: "Internal Server Error",
         });
     }
-}
+             }
