@@ -40,7 +40,6 @@ export default async function handler(req, res) {
 async function repostalk(username, repo) {
     try {
         const { data } = await axios.get(`https://api.github.com/repos/${username}/${repo}`, {
-            headers: { "User-Agent": "Repo-Stalk-Bot" },
             timeout: 10000
         });
 
@@ -91,4 +90,4 @@ async function repostalk(username, repo) {
     } catch (error) {
         throw new Error("Repositori tidak ditemukan atau terjadi kesalahan.");
     }
-          }
+}
