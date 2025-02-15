@@ -230,6 +230,59 @@
     }
   }
 },
+  "/api/search/caribuku": {
+    "get": {
+      "tags": ["Search"],
+      "summary": "Cari buku di Goodreads",
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Kata kunci untuk mencari buku di Goodreads"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "link": { "type": "string", "format": "uri" },
+                        "rating": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
     "/api/ai/openai": {
       "get": {
         "tags": ["ArticleIntelligence"],
