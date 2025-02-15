@@ -233,7 +233,6 @@
   "/api/search/caribuku": {
     "get": {
       "tags": ["Search"],
-      "summary": "Cari buku di Goodreads",
       "parameters": [
         {
           "name": "query",
