@@ -282,6 +282,73 @@
       }
     }
   },
+  "/api/search/cineplex": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "type",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "enum": ["release", "detail"]
+          },
+          "required": true,
+          "description": "Tipe pencarian: 'release' untuk daftar film, 'detail' untuk detail film"
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          },
+          "required": false,
+          "description": "URL film untuk mendapatkan detailnya (wajib jika type=detail)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": { "type": "string" },
+                        "title": { "type": "string" },
+                        "image": { "type": "string", "format": "uri" },
+                        "type": { "type": "string" },
+                        "rating": { "type": "string" },
+                        "advanceTicketSales": { "type": "string" },
+                        "detailsLink": { "type": "string", "format": "uri" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
     "/api/ai/openai": {
       "get": {
         "tags": ["ArticleIntelligence"],
