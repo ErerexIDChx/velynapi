@@ -411,7 +411,7 @@
   },
     "/api/ai/openai": {
       "get": {
-        "tags": ["ArticleIntelligence"],
+        "tags": ["Artificial Intelligence"],
         "parameters": [
           {
             "name": "prompt",
@@ -433,7 +433,7 @@
     },
      "/api/ai/simi": {
       "get": {
-        "tags": ["ArticleIntelligence"],
+        "tags": ["Artificial Intelligence"],
         "parameters": [
           {
             "name": "prompt",
@@ -455,7 +455,7 @@
     },  
      "/api/ai/gemini": {
       "get": {
-        "tags": ["ArticleIntelligence"],
+        "tags": ["Artificial Intelligence"],
         "parameters": [
           {
             "name": "prompt",
@@ -477,7 +477,7 @@
     },
      "/api/ai/deepseek": {
       "get": {
-        "tags": ["ArticleIntelligence"],
+        "tags": ["Artificial Intelligence"],
         "parameters": [
           {
             "name": "prompt",
