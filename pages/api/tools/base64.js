@@ -30,8 +30,9 @@ export default async function handler(req, res) {
         });
     }
 
-  
-    const isBase64 = /^[A-Za-z0-9+/=]+$/.test(input) && input.length % 4 === 0;
+    // Cek apakah input dalam format Base64 yang valid
+    const base64Regex = /^[A-Za-z0-9+/=]+$/;
+    const isBase64 = base64Regex.test(input) && input.length % 4 === 0;
     const result = isBase64 ? decodeBase64(input) : encodeBase64(input);
 
     if (result === null) {
