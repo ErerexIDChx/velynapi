@@ -21,7 +21,7 @@ export async function ephoto(url, text) {
             throw new Error("Gagal mengambil token atau data server.");
         }
 
-       
+        
         let form = new FormData();
         form.append("text[]", text);
         form.append("token", token);
@@ -31,8 +31,6 @@ export async function ephoto(url, text) {
         const response = await axios.post(url, form, {
             headers: {
                 ...form.getHeaders(),
-                "Accept": "*/*",
-                "Accept-Language": "en-US,en;q=0.9",
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
                 "Cookie": headers["set-cookie"]?.join("; ")
             }
@@ -61,4 +59,4 @@ export async function ephoto(url, text) {
         console.error("Error pada ephoto:", error.message);
         return { error: error.message };
     }
-    }
+}
