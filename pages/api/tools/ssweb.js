@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         });
     }
 }
-
+// Apikey dari amad sikma 
 async function fetchScreenshot(targetUrl) {
     try {
         const apiUrl = `https://api.screenshotmachine.com?key=44733b&url=${encodeURIComponent(targetUrl)}&dimension=1024x768`;
