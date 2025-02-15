@@ -36,7 +36,7 @@ export default async function handler(req, res) {
 
 async function fetchScreenshot(targetUrl) {
     try {
-        const apiUrl = `https://api.screenshotmachine.com?key=4473b&url=${encodeURIComponent(targetUrl)}&dimension=1024x768`;
+        const apiUrl = `https://api.screenshotmachine.com?key=44733b&url=${encodeURIComponent(targetUrl)}&dimension=1024x768`;
         const { data } = await axios.get(apiUrl, {
             headers: {
                 "DNT": 1,
