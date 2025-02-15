@@ -224,7 +224,6 @@
     "/api/tools/ssweb": {
       "get": {
         "tags": ["Tools"],
-        "summary": "Mengambil screenshot dari URL yang diberikan",
         "parameters": [
           {
             "name": "url",
