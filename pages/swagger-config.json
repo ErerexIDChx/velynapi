@@ -590,6 +590,50 @@
         }
       }
     },
+    "/api/ai/magicAI": {
+  "get": {
+    "tags": ["Artificial Intelligence"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+}
      "/api/ai/simi": {
       "get": {
         "tags": ["Artificial Intelligence"],
