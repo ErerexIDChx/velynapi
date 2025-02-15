@@ -12,12 +12,7 @@ export async function ephoto(url, text) {
             }
         });
 
-        // Pastikan data adalah string HTML yang valid
-        if (!data || typeof data !== "string") {
-            throw new Error("Invalid HTML data received from the server.");
-        }
-
-        const $ = cheerio.load(data); // Gunakan data yang valid
+        const $ = cheerio.load(data);
         const token = $("input[name=token]").val();
         const build_server = $("input[name=build_server]").val();
         const build_server_id = $("input[name=build_server_id]").val();
@@ -42,12 +37,7 @@ export async function ephoto(url, text) {
             }
         });
 
-        // Pastikan response.data adalah string HTML yang valid
-        if (!response.data || typeof response.data !== "string") {
-            throw new Error("Invalid HTML data received from the server.");
-        }
-
-        const $$ = cheerio.load(response.data); // Gunakan response.data yang valid
+        const $$ = cheerio.load(response.data);
         const jsonData = JSON.parse($$("input[name=form_value_input]").val() || "{}");
 
         if (!jsonData.text) {
