@@ -30,6 +30,7 @@
     "next": "13.5.5",
     "node-fetch": "^2.7.0",
     "node-upload-images": "^1.0.1",
+    "path": "^0.12.7",
     "qrcode": "^1.5.4",
     "qs": "^6.10.1",
     "react": "18.2.0",
