@@ -65,6 +65,49 @@
         }
       }
     },
+    "/api/tools/morse": {
+  "get": {
+    "tags": ["Tools"],
+    "parameters": [
+      {
+        "name": "input",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks atau kode Morse yang akan dikonversi"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "input": { "type": "string" },
+                "output": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'input' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
     "/api/maker/brat": {
   "get": {
     "tags": ["Maker"],
