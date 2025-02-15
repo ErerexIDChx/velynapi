@@ -40,7 +40,6 @@ export default async function handler(req, res) {
 async function githubstalk(user) {
     try {
         const { data } = await axios.get(`https://api.github.com/users/${user}`, {
-            headers: { "User-Agent": "GitHub-Stalk-Bot" },
             timeout: 10000
         });
 
