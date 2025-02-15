@@ -329,7 +329,7 @@
         }
       }
     },
-    "/api/downloader/buddy": {
+    "/api/downloader/ytDownload": {
       "get": {
         "tags": ["Downloader"],
           "parameters": [
