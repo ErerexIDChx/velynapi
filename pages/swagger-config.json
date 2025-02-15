@@ -65,6 +65,74 @@
         }
       }
     },
+    "/api/maker/brat": {
+  "get": {
+    "tags": ["Maker"],
+    "parameters": [
+      {
+        "name": "text",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks yang akan diubah menjadi brat image"
+      },
+      {
+        "name": "fontSize",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "default": "100"
+        },
+        "description": "Ukuran font untuk brat image"
+      },
+      {
+        "name": "blurLevel",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "default": "5"
+        },
+        "description": "Tingkat blur pada brat image"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "text": { "type": "string" },
+                    "fontSize": { "type": "string" },
+                    "blurLevel": { "type": "string" },
+                    "image": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'text' wajib diisi"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
     "/api/ai/openai": {
       "get": {
         "tags": ["ArticleIntelligence"],
