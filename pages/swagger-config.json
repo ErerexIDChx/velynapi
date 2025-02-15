@@ -13,6 +13,66 @@
     "version": "1.0"
   },
   "paths": {
+  "/api/stalk/githubstalk": {
+    "get": {
+      "tags": ["Stalk"],
+      "parameters": [
+        {
+          "name": "username",
+          "in": "query",
+          "schema": { "type": "string" },
+          "required": true,
+          "description": "Nama pengguna GitHub"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "username": { "type": "string" },
+                      "nickname": { "type": "string" },
+                      "bio": { "type": "string" },
+                      "id": { "type": "integer" },
+                      "nodeId": { "type": "string" },
+                      "profile_pic": { "type": "string", "format": "uri" },
+                      "url": { "type": "string", "format": "uri" },
+                      "type": { "type": "string" },
+                      "admin": { "type": "boolean" },
+                      "company": { "type": "string" },
+                      "blog": { "type": "string" },
+                      "location": { "type": "string" },
+                      "email": { "type": "string" },
+                      "public_repo": { "type": "integer" },
+                      "public_gists": { "type": "integer" },
+                      "followers": { "type": "integer" },
+                      "following": { "type": "integer" },
+                      "created_at": { "type": "string", "format": "date-time" },
+                      "updated_at": { "type": "string", "format": "date-time" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
     "/api/tools/Carbonfyv1": {
       "post": {
         "tags": ["Tools"],
