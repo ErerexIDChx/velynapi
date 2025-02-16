@@ -13,6 +13,7 @@
     "version": "1.0"
   },
   "paths": {
+    
     "/api/stalk/repostalk": {
     "get": {
       "tags": ["Stalker"],
@@ -591,27 +592,67 @@
       }
     },
     "/api/ai/magicStudio": {
-        "get": {
-        "tags": ["Artificial Intelligence"],
-        "parameters": [
-          {
-            "name": "prompt",
-            "in": "query",
+  "get": {
+    "tags": ["Artificial Intelligence"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Deskripsi gambar yang ingin dihasilkan oleh AI"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil menghasilkan gambar",
+        "content": {
+          "image/png": {
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "binary"
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          },
-          "401": {
-            "description": "Unauthorized"
+        }
+      },
+      "400": {
+        "description": "Parameter 'prompt' tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Metode tidak diizinkan"
+      },
+      "500": {
+        "description": "Kesalahan internal server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
           }
         }
       }
-    },
+    }
+  }
+},
      "/api/ai/simi": {
       "get": {
         "tags": ["Artificial Intelligence"],
