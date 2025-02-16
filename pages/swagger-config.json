@@ -609,10 +609,14 @@
       "200": {
         "description": "Berhasil menghasilkan gambar",
         "content": {
-          "image/png": {
+          "application/json": {
             "schema": {
-              "type": "string",
-              "format": "binary"
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": { "type": "string", "format": "binary" }
+              }
             }
           }
         }
