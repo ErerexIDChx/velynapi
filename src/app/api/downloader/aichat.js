@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const { query } = req.query;
     
     try {
-        const data = await robloxStalk(query);
+        const data = await robloxStalk(query); // ini error gak ada
         res.status(200).json({
             status: true,
             creator: CREATOR,

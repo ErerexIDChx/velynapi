@@ -1,6 +1,6 @@
 import axios from "axios";
 import FormData from "form-data";
-import { API_KEY, CREATOR } from "../../../settings";
+import {  CREATOR } from "../../../settings";
 
 export default async function handler(req, res) {
     if (req.method !== "GET") {

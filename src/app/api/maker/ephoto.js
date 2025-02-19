@@ -1,5 +1,6 @@
 import { ephoto } from "../../../utils/ephoto";
-import { API_KEY, CREATOR } from "../../../settings";
+import axios from "axios";
+import { CREATOR } from "../../../settings";
 
 const effectLinks = {
     glitchtext: "https://en.ephoto360.com/create-digital-glitch-text-effects-online-767.html",

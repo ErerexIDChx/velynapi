@@ -1,6 +1,6 @@
 import axios from "axios";
 import cheerio from "cheerio";
-import { API_KEY, CREATOR } from "../../../settings";
+import {  CREATOR } from "../../../settings";
 
 export default async function handler(req, res) {
     if (req.method !== "GET") {
@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     const { query } = req.query;
     
     try {
-        const data = await Bsearch(query);
+        const data = await Bsearch(query); // fix ini
         res.status(200).json({
             status: true,
             creator: CREATOR,

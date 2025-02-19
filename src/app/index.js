@@ -104,23 +104,24 @@ export default function Home() {
         <meta name="twitter:image" content="https://files.catbox.moe/962uqd.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Script
+    <Script
+        id="ld-json-script"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "WebSite",
-            "name": "velyn",
-            "url": "https://ererexidchx.vercel.app",
-            "description": "velyn is a free, simple REST API created by ErerexID Chx for the common good. Feel free to use it, but please avoid DDoS attacks.",
-            "sameAs": [
-              "https://www.facebook.com/yourprofile",
-              "https://www.twitter.com/yourprofile",
-              "https://www.linkedin.com/in/yourprofile"
-            ]
-          })
+            __html: JSON.stringify({
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "name": "velyn",
+                "url": "https://ererexidchx.vercel.app",
+                "description": "velyn is a free, simple REST API created by ErerexID Chx for the common good. Feel free to use it, but please avoid DDoS attacks.",
+                "sameAs": [
+                    "https://www.facebook.com/yourprofile",
+                    "https://www.twitter.com/yourprofile",
+                    "https://www.linkedin.com/in/yourprofile"
+                ]
+            })
         }}
-      />
+    />
       <main className={`p-6 ${inter.className}`}>
         <Analytics />
         <SpeedInsights />
