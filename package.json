@@ -1,6 +1,6 @@
 {
-  "name": "VelynApi-Swagger-ui-nextjs",
-  "version": "0.1",
+  "name": "next14starter",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -28,16 +28,25 @@
     "groq-sdk": "^0.7.0",
     "html-entities": "*",
     "needle": "^3.2.0",
-    "next": "13.5.5",
     "node-fetch": "^2.7.0",
     "node-upload-images": "^1.0.1",
     "qrcode": "^1.5.4",
     "qs": "^6.10.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "swagger-ui-react": "^5.18.3",
     "tailwindcss": "^4.0.6",
     "yargs": "^17.2.1",
-    "yt-search": "*"
+    "yt-search": "*",
+    "bcryptjs": "^2.4.3",
+    "install": "^0.13.0",
+    "mongoose": "^8.0.0",
+    "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.3",
+    "npm": "^10.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4"
   }
 }

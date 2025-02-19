@@ -1,0 +1,971 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "VelynApi",
+    "description": "Welcome everyone, welcome to VelynAPI document home page. You can retrieve api data only in VelynAPI and certainly without incurring any costs in data retrieval, and the results obtained are very simple and very clear to understand",
+    "contact": {
+      "email": "https://wa.me/+62895342022385"
+    },
+    "license": {
+      "name": "NextTime Information",
+      "url": "https://whatsapp.com/channel/0029VaKoIaj9cDDgB6N9u232"
+    },
+    "version": "1.0"
+  },
+  "paths": {
+    
+    "/api/stalk/repostalk": {
+    "get": {
+      "tags": ["Stalker"],
+      "parameters": [
+        {
+          "name": "username",
+          "in": "query",
+          "schema": { "type": "string" },
+          "required": true,
+          "description": "Nama pengguna GitHub"
+        },
+        {
+          "name": "repo",
+          "in": "query",
+          "schema": { "type": "string" },
+          "required": true,
+          "description": "Nama repositori GitHub"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "repo_name": { "type": "string" },
+                      "full_name": { "type": "string" },
+                      "description": { "type": "string" },
+                      "repo_id": { "type": "integer" },
+                      "node_id": { "type": "string" },
+                      "owner": {
+                        "type": "object",
+                        "properties": {
+                          "username": { "type": "string" },
+                          "profile_url": { "type": "string", "format": "uri" },
+                          "avatar_url": { "type": "string", "format": "uri" },
+                          "type": { "type": "string" }
+                        }
+                      },
+                      "private": { "type": "boolean" },
+                      "html_url": { "type": "string", "format": "uri" },
+                      "homepage": { "type": "string" },
+                      "language": { "type": "string" },
+                      "topics": { "type": "array", "items": { "type": "string" } },
+                      "visibility": { "type": "string" },
+                      "fork": { "type": "boolean" },
+                      "forks_count": { "type": "integer" },
+                      "stargazers_count": { "type": "integer" },
+                      "watchers_count": { "type": "integer" },
+                      "open_issues_count": { "type": "integer" },
+                      "license": {
+                        "type": "object",
+                        "properties": {
+                          "key": { "type": "string" },
+                          "name": { "type": "string" },
+                          "url": { "type": "string", "format": "uri" }
+                        }
+                      },
+                      "created_at": { "type": "string", "format": "date-time" },
+                      "updated_at": { "type": "string", "format": "date-time" },
+                      "pushed_at": { "type": "string", "format": "date-time" },
+                      "default_branch": { "type": "string" },
+                      "size": { "type": "integer" },
+                      "archived": { "type": "boolean" },
+                      "disabled": { "type": "boolean" },
+                      "allow_forking": { "type": "boolean" },
+                      "is_template": { "type": "boolean" },
+                      "has_issues": { "type": "boolean" },
+                      "has_projects": { "type": "boolean" },
+                      "has_downloads": { "type": "boolean" },
+                      "has_wiki": { "type": "boolean" },
+                      "has_pages": { "type": "boolean" },
+                      "has_discussions": { "type": "boolean" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+  "/api/stalk/githubstalk": {
+    "get": {
+      "tags": ["Stalker"],
+      "parameters": [
+        {
+          "name": "username",
+          "in": "query",
+          "schema": { "type": "string" },
+          "required": true,
+          "description": "Nama pengguna GitHub"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "username": { "type": "string" },
+                      "nickname": { "type": "string" },
+                      "bio": { "type": "string" },
+                      "id": { "type": "integer" },
+                      "nodeId": { "type": "string" },
+                      "profile_pic": { "type": "string", "format": "uri" },
+                      "url": { "type": "string", "format": "uri" },
+                      "type": { "type": "string" },
+                      "admin": { "type": "boolean" },
+                      "company": { "type": "string" },
+                      "blog": { "type": "string" },
+                      "location": { "type": "string" },
+                      "email": { "type": "string" },
+                      "public_repo": { "type": "integer" },
+                      "public_gists": { "type": "integer" },
+                      "followers": { "type": "integer" },
+                      "following": { "type": "integer" },
+                      "created_at": { "type": "string", "format": "date-time" },
+                      "updated_at": { "type": "string", "format": "date-time" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+    "/api/tools/Carbonfyv1": {
+      "post": {
+        "tags": ["Tools"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "default": "hallo wirr"
+                  }
+                },
+                "required": ["text"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/tools/subfinder": {
+      "get": {
+        "tags": ["Tools"],
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/tools/ssweb": {
+      "get": {
+        "tags": ["Tools"],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uri"
+            },
+            "description": "URL dari halaman yang ingin di-screenshot"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Berhasil mengambil screenshot",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Parameter 'url' tidak diberikan",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Metode tidak diizinkan"
+          },
+          "500": {
+            "description": "Kesalahan internal server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "boolean" },
+                    "creator": { "type": "string" },
+                    "error": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tools/morse": {
+  "get": {
+    "tags": ["Tools"],
+    "parameters": [
+      {
+        "name": "input",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks atau kode Morse yang akan dikonversi"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "input": { "type": "string" },
+                "output": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'input' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+    "/api/maker/brat": {
+  "get": {
+    "tags": ["Maker"],
+    "parameters": [
+      {
+        "name": "text",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Teks yang akan diubah menjadi brat image"
+      },
+      {
+        "name": "fontSize",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "default": "100"
+        },
+        "description": "Ukuran font untuk brat image"
+      },
+      {
+        "name": "blurLevel",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "default": "5"
+        },
+        "description": "Tingkat blur pada brat image"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "text": { "type": "string" },
+                    "fontSize": { "type": "string" },
+                    "blurLevel": { "type": "string" },
+                    "image": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'text' wajib diisi"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+    "/api/search/an1": {
+  "get": {
+    "tags": ["Search"],
+    "parameters": [
+      {
+        "name": "query",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "required": true,
+        "description": "Kata kunci untuk mencari aplikasi atau game di AN1"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": { "type": "string" },
+                      "dev": { "type": "string" },
+                      "rating": { "type": "string" },
+                      "thumb": { "type": "string", "format": "uri" },
+                      "link": { "type": "string", "format": "uri" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+      },
+      "401": {
+        "description": "Unauthorized"
+      },
+      "500": {
+        "description": "Internal Server Error"
+      }
+    }
+  }
+},
+  "/api/search/caribuku": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "schema": {
+            "type": "string"
+          },
+          "required": true,
+          "description": "Kata kunci untuk mencari buku di Goodreads"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "title": { "type": "string" },
+                        "link": { "type": "string", "format": "uri" },
+                        "rating": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter 'query' tidak boleh kosong"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+  "/api/search/cineplex": {
+    "get": {
+      "tags": ["Search"],
+      "parameters": [
+        {
+          "name": "type",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "enum": ["release", "detail"]
+          },
+          "required": true,
+          "description": "Tipe pencarian: 'release' untuk daftar film, 'detail' untuk detail film"
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "schema": {
+            "type": "string",
+            "format": "uri"
+          },
+          "required": false,
+          "description": "URL film untuk mendapatkan detailnya (wajib jika type=detail)"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": { "type": "boolean" },
+                  "creator": { "type": "string" },
+                  "data": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": { "type": "string" },
+                        "title": { "type": "string" },
+                        "image": { "type": "string", "format": "uri" },
+                        "type": { "type": "string" },
+                        "rating": { "type": "string" },
+                        "advanceTicketSales": { "type": "string" },
+                        "detailsLink": { "type": "string", "format": "uri" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad Request - Parameter tidak valid"
+        },
+        "401": {
+          "description": "Unauthorized"
+        },
+        "500": {
+          "description": "Internal Server Error"
+        }
+      }
+    }
+  },
+    "/api/ai/openai": {
+      "get": {
+        "tags": ["Artificial Intelligence"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/ai/magicStudio": {
+  "get": {
+    "tags": ["Artificial Intelligence"],
+    "parameters": [
+      {
+        "name": "prompt",
+        "in": "query",
+        "required": true,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Deskripsi gambar yang ingin dihasilkan oleh AI"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil menghasilkan gambar",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": { "type": "string", "format": "binary" }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Parameter 'prompt' tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Metode tidak diizinkan"
+      },
+      "500": {
+        "description": "Kesalahan internal server",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+     "/api/ai/simi": {
+      "get": {
+        "tags": ["Artificial Intelligence"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },  
+     "/api/ai/gemini": {
+      "get": {
+        "tags": ["Artificial Intelligence"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+     "/api/ai/deepseek": {
+      "get": {
+        "tags": ["Artificial Intelligence"],
+        "parameters": [
+          {
+            "name": "prompt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/instagram": {
+      "get": {
+        "tags": ["Downloader"],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/facebook": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/tiktoksearch": {
+      "get": {
+        "tags": ["Search"],
+          "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/anichin": {
+      "get": {
+        "tags": ["Search"],
+          "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/wikped": {
+      "get": {
+        "tags": ["Search"],
+          "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/snackVideo": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/search/bstationSearch": {
+      "get": {
+        "tags": ["Search"],
+          "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/spotifydl": {
+      "get": {
+        "tags": ["Downloader"],
+         "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/ytDownload": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/downloader/krakenfiles": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    
+       
+      "/api/downloader/tiktok": {
+      "get": {
+        "tags": ["Downloader"],
+          "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  }
+}
