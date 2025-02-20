@@ -11,8 +11,8 @@ const Home = () => {
           and the results obtained are very simple and very clear to understand
         </p>
         <div className={styles.buttons}>
-          <a href="/index" className={styles.button}>Docs Endpoint</a>
-          <a href="/contact/page.jsx" className={styles.button}>Contact</a>
+          <a href="/docs" className={styles.button}>Docs Endpoint</a>
+          <a href="/contact" className={styles.button}>Contact</a>
         </div>
       </div>
       <div className={styles.imgContainer}>

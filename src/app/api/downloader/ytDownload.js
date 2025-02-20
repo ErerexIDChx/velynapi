@@ -1,4 +1,4 @@
-import { API_KEY, CREATOR } from "../../../settings";
+import { CREATOR } from "../../../settings";
 import axios from "axios";
 
 export default async function handler(req, res) {

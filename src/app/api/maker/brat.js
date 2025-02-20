@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_KEY, CREATOR } from "../../../settings";
+import { CREATOR } from "../../../settings";
 
 export default async function handler(req, res) {
     if (req.method !== "GET") {
@@ -38,7 +38,6 @@ export default async function handler(req, res) {
 }
 
 async function bratImage(prompt, font_text, blur_level) {
-    return new Promise(async (resolve, reject) => {
         const url = 'https://www.bestcalculators.org/wp-admin/admin-ajax.php';
 
         const headers = {
@@ -59,21 +58,21 @@ async function bratImage(prompt, font_text, blur_level) {
         });
 
         try {
-            const response = await axios.post(url, data.toString(), { headers });
+const response = await axios.post(url, data, { headers });
             if (response.status !== 200) {
                 throw new Error(`HTTP Error: ${response.status}`);
             }
 
-            resolve({
+            return {
                 text: prompt,
                 fontSize: font_text,
                 blurLevel: blur_level,
                 image: `data:image/png;base64,${response.data}`,
-            });
+            }
 
         } catch (error) {
-            console.error('Error fetching brat image:', error);
-            reject({ success: false, message: "Gagal membuat brat image: " + error.message });
+            console.error('Error fetching brat image:', error)
+            return { success: false, message: "Gagal membuat brat image: " + error.message }
         }
-    });
-                  }
+    }
+                  

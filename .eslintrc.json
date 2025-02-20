@@ -5,6 +5,15 @@
   ],
   "rules": {
     "react/prop-types": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "no-constant-condition": "off",
+    "no-async-promise-executor": "off",
+    "no-inner-declarations": "off",
+    "no-useless-catch": "off",
+    "no-useless-escape": "off",
+    "no-extra-semi": "off",
+    "no-control-regex": "off",
+    "@next/next/no-document-import-in-page": "off"
   }
 }

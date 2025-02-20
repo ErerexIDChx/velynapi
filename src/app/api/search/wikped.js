@@ -1,5 +1,6 @@
 //BabyBotz MultiDevice
-import { API_KEY, CREATOR } from "../../../settings";
+import * as cheerio from "cheerio";
+import {  CREATOR } from "../../../settings";
 import fetch from 'node-fetch'; 
 
 export default async function handler(req, res) {

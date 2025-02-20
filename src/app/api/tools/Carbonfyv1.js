@@ -1,7 +1,5 @@
 import fetch from 'node-fetch';
-import FormData from 'form-data';
-import { fileTypeFromBuffer } from 'file-type';  // Perbarui dari 'fromBuffer' menjadi 'fileTypeFromBuffer'
-import { API_KEY, CREATOR } from '../../../settings';
+import {  CREATOR } from '../../../settings';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
