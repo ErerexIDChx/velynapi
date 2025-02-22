@@ -15,101 +15,28 @@
   "paths": {
     
     "/api/stalk/repostalk": {
-    "get": {
-      "tags": ["Stalker"],
-      "parameters": [
-        {
-          "name": "username",
-          "in": "query",
-          "schema": { "type": "string" },
-          "required": true,
-          "description": "Nama pengguna GitHub"
-        },
-        {
-          "name": "repo",
-          "in": "query",
-          "schema": { "type": "string" },
-          "required": true,
-          "description": "Nama repositori GitHub"
-        }
-      ],
-      "responses": {
-        "200": {
-          "description": "Success",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "status": { "type": "boolean" },
-                  "creator": { "type": "string" },
-                  "data": {
-                    "type": "object",
-                    "properties": {
-                      "repo_name": { "type": "string" },
-                      "full_name": { "type": "string" },
-                      "description": { "type": "string" },
-                      "repo_id": { "type": "integer" },
-                      "node_id": { "type": "string" },
-                      "owner": {
-                        "type": "object",
-                        "properties": {
-                          "username": { "type": "string" },
-                          "profile_url": { "type": "string", "format": "uri" },
-                          "avatar_url": { "type": "string", "format": "uri" },
-                          "type": { "type": "string" }
-                        }
-                      },
-                      "private": { "type": "boolean" },
-                      "html_url": { "type": "string", "format": "uri" },
-                      "homepage": { "type": "string" },
-                      "language": { "type": "string" },
-                      "topics": { "type": "array", "items": { "type": "string" } },
-                      "visibility": { "type": "string" },
-                      "fork": { "type": "boolean" },
-                      "forks_count": { "type": "integer" },
-                      "stargazers_count": { "type": "integer" },
-                      "watchers_count": { "type": "integer" },
-                      "open_issues_count": { "type": "integer" },
-                      "license": {
-                        "type": "object",
-                        "properties": {
-                          "key": { "type": "string" },
-                          "name": { "type": "string" },
-                          "url": { "type": "string", "format": "uri" }
-                        }
-                      },
-                      "created_at": { "type": "string", "format": "date-time" },
-                      "updated_at": { "type": "string", "format": "date-time" },
-                      "pushed_at": { "type": "string", "format": "date-time" },
-                      "default_branch": { "type": "string" },
-                      "size": { "type": "integer" },
-                      "archived": { "type": "boolean" },
-                      "disabled": { "type": "boolean" },
-                      "allow_forking": { "type": "boolean" },
-                      "is_template": { "type": "boolean" },
-                      "has_issues": { "type": "boolean" },
-                      "has_projects": { "type": "boolean" },
-                      "has_downloads": { "type": "boolean" },
-                      "has_wiki": { "type": "boolean" },
-                      "has_pages": { "type": "boolean" },
-                      "has_discussions": { "type": "boolean" }
-                    }
-                  }
-                }
+      "get": {
+        "tags": ["Stalk"],
+        "description": "Ge",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string"
               }
-            }
+           }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
-        },
-        "400": {
-          "description": "Bad Request - Parameter tidak valid"
-        },
-        "500": {
-          "description": "Internal Server Error"
         }
       }
-    }
-  },
+    },
   "/api/stalk/githubstalk": {
     "get": {
       "tags": ["Stalker"],
