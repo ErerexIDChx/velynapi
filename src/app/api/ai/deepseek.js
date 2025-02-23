@@ -1,31 +1,41 @@
 import axios from "axios";
 import FormData from "form-data";
-import { CREATOR } from "../../../settings";
+import { CREATOR } from "../../../../settings";  // Sesuaikan path settings.js
 
-export default async function handler(req, res) {
-    if (req.method !== "GET") {
-        return res.status(405).json({
+export async function GET(req) {
+    const { searchParams } = new URL(req.url);
+    const prompt = searchParams.get("input");
+
+    if (!prompt) {
+        return new Response(JSON.stringify({
             status: false,
             creator: CREATOR,
-            error: "Method Not Allowed",
+            error: "Missing input parameter"
+        }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" }
         });
     }
 
-    const { prompt } = req.query;
-    
     try {
         const data = await deepSeekThink.chat(prompt);
-        res.status(200).json({
+        return new Response(JSON.stringify({
             status: true,
             creator: CREATOR,
-            data: data,
+            data: data
+        }), {
+            status: 200,
+            headers: { "Content-Type": "application/json" }
         });
     } catch (error) {
         console.error(error);
-        res.status(500).json({
+        return new Response(JSON.stringify({
             status: false,
             creator: CREATOR,
-            error: "Internal Server Error",
+            error: "Internal Server Error"
+        }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" }
         });
     }
 }
@@ -35,15 +45,15 @@ const deepSeekThink = {
         let d = new FormData();
         d.append("content", `User: ${question}`);
         d.append("model", "@groq/deepseek-r1-distill-llama-70b");
-        
+
         let head = {
             headers: {
                 ...d.getHeaders()
             }
         };
-        
+
         let { data: ak } = await axios.post("https://mind.hydrooo.web.id/v1/chat", d, head);
-        
+
         let rep = ak.result.replace(/<think>\n\n<\/think>\n\n/g, "");
 
         return rep;
