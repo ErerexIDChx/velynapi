@@ -1,4 +1,6 @@
-export default function handler(req, res) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     res.status(200).json({ message: 'Halo, ini API Velyn!' });
   } else if (req.method === 'POST') {
