@@ -2792,6 +2792,92 @@
         }
       }
     },
+    "/api/downloader/facebookdl": {
+  "get": {
+    "tags": ["Downloader"],
+    "parameters": [
+      {
+        "name": "url",
+        "in": "query",
+        "description": "URL video Facebook yang ingin diunduh",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Berhasil mendapatkan data video",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "video_url": { "type": "string" },
+                    "title": { "type": "string" },
+                    "thumbnail": { "type": "string" },
+                    "duration": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Kesalahan validasi, URL tidak valid atau tidak diberikan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Terjadi kesalahan di server atau gagal mengambil video",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      },
+      "405": {
+        "description": "Metode HTTP tidak diizinkan",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": { "type": "boolean" },
+                "creator": { "type": "string" },
+                "error": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
     "/api/downloader/tiktok": {
       "get": {
         "tags": ["Downloader"],
